@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainResultsComponent } from './main-results/main-results.component';
 import { UiModule } from '@lottoland/ui';
@@ -20,6 +20,7 @@ const routes: Routes = [
   exports: [
     MainResultsComponent
   ],
-  providers: [ResultsResolver]
+  providers: [ResultsResolver],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class EuroJackpotResultsModule {}

@@ -8,19 +8,24 @@
 }
 
 .even {
-    background-color: #e9ecef;
+    background-color: $grid-even;
 }
 
 lottoland-result-item {
-    border-bottom: 1px solid lightgrey;
-    border-right: 1px solid lightgrey;
-    border-left: 1px solid lightgrey;
+    border-bottom: 1px solid $lightgrey;
+    border-right: 1px solid $lightgrey;
+    border-left: 1px solid $lightgrey;
 }
 
 lottoland-result-item:first-of-type {
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid $lightgrey;
 }
 
 .lottery-primary {
     color: $lottery-primary;
+}
+
+wc-winner-numbers {
+    --enumber-color: rgb(202, 127, 38);
+    --number-color: gray;
 }

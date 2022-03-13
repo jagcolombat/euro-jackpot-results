@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { IResultItem, LoaderService } from '@lottoland/utils';
 import { getResultItem } from '@lottoland/utils';
 import { ActivatedRoute } from '@angular/router';
+import {WinnerNumbers} from '@lottoland/ui';
 @Component({
   selector: 'lottoland-main-results',
   templateUrl: './main-results.component.html',
@@ -15,7 +16,8 @@ export class MainResultsComponent implements OnInit {
   euroNumbers?: number[]; 
   resultItems?: IResultItem[];
   
-  constructor(public route: ActivatedRoute, private loaderServ: LoaderService) { }
+  constructor(public route: ActivatedRoute, private loaderServ: LoaderService) {
+  }
 
   ngOnInit(): void {
     this.route.data.subscribe({

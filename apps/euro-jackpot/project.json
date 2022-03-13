@@ -16,10 +16,17 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/euro-jackpot/src/favicon.ico",
-          "apps/euro-jackpot/src/assets"
+          "apps/euro-jackpot/src/assets",
+          {
+            "glob": "{*loader.js,bundles/*.js}",
+            "input": "node_modules/@webcomponents/webcomponentsjs",
+            "output": "node_modules/@webcomponents/webcomponentsjs"
+          }
         ],
-        "styles": ["apps/euro-jackpot/src/styles.scss"],
-        "scripts": []
+        "scripts": [
+          "node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"
+        ],
+        "styles": ["apps/euro-jackpot/src/styles.scss"]
       },
       "configurations": {
         "production": {
